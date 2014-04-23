@@ -1,0 +1,7 @@
+1.rails server如果出现Could not find a JavaScript runtime则需要安装nodejs包sudo .apt-get install nodejs;
+2.创建新的rails项目：rails new name,这个命令会在name文件夹下创建项目所需文件。
+3.进入name文件夹cd name，然后利用命令bundle install或者bundle来为该rails项目安装所有以来的套件。
+4.创建welcome controller,在routes.rb中将wecome/say_hello对应到控制器welcome的say Action上，并在app/controllers/welcome_controller.rb中加入次方法say.
+5.在Controller中，一个public method定义一个方法(Action)，而一个方法对应一个HTTP的请求和回应.
+6.添加view文件,在app/views/welcome中添加文件say.html.erb作为say Action的回应.
+
