@@ -3,4 +3,7 @@
 3.在对应数据库的.rb里加入validates_presence_of可以强制要求某些属性not null。
 4.用rails g model创建model后，会生成名字带s的数据库，如rails g model event，则会查生events的数据库。
 5.在config/application.rb中添加config.action_view.sanitized_allowed_tags = %w[table tr td]
-
+6.数据库中column名不能为type，这会与内部命名冲突。修改名字方法
+def change
+    rename :table, :oldname, :newname
+end

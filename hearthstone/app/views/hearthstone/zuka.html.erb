@@ -1,11 +1,16 @@
 <h1>新建卡组</h1>
 <div>
-  <li style="position: absolute; top:70px; left:5px">
+  <li styl e ="position: absolute; top:70px; left:5px">
     <p><%= link_to 'Hunter', :controller => 'hearthstone', :action => 'select', :belong => 'Hunter', :remote => true, "data-type" => "script "%></p>
     <p><%= link_to 'Mage', :controller => 'hearthstone', :action => 'select', :belong => 'Mage', :remote => true, "data-type" => "script "%></p>  
 </li>
-  <table id="belonglist" style="position: absolute; top:70px; left:100px">
+  <table id = "belonglist" style = "position: absolute; top:70px; left:100px">
   </table>
-  <div id="content" style="margin-left: 400px; margin-top:20px">
+  <div id = "content" style = "position: absolute; top:70px; left:400px">
   </div>
+  <div id = "number">
+  </div>
+  <button style = "position: abolute; top:200px; left:200px; height:25px"> <%= link_to 'View', :controller => 'hearthstone', :action => 'view', :remote => true, "data-type" => "script" %></p>
+</div>
+<div id="view">
 </div>

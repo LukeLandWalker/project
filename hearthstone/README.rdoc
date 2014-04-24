@@ -20,3 +20,7 @@
 
 <th><%= link_to card.name, :controller => 'hearthstone', :action => 'show', :id => card, :remote => true, "data-type" => "script" %></th>
 
+@newCard.card_id = params[:id]
+    @newCard.number = params[:number].to_i
+
+

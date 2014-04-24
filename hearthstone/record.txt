@@ -7,3 +7,13 @@
 def change
     rename :table, :oldname, :newname
 end
+
+
+ if @oldCard = TempSet.where("card_id = ?", params[:id])
+      if @oldCard.number + @newCard.number > 2
+        @warn = 'Too many this card, it already have' + @oldCard.number.to_s
+      else
+        @oldCard.update_attribute('number', 2)
+      end
+    else
+

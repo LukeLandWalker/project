@@ -1,1 +1,9 @@
-<p><%= image_tag(@card.route) %></p>
+<%= form_for @newCard, :remote => true, :url => { :controller => 'hearthstone', :action => 'add', :id => @card} do |f| %>  
+  <p><%= image_tag(@card.route) %></p>
+  <p>CardID:<%= @card.id %></p>
+  <%= f.submit "Add one" %>
+<% end %>
+<%= form_for @newCard, :remote => true, :url => { :controller => 'hearthstone', :action => 'decrease', :id => @card} do |f| %>
+<%= f.submit "Remove one" %>
+<% end %>
+
