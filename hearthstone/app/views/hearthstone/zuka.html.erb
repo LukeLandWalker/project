@@ -1,19 +1,11 @@
 <h1>新建卡组</h1>
 <div>
-<table style="magin-right:800px; margin-left:200px; margin-top:20px">
-  <tr>
-    <th>name</th>
-    <th>type</th>
-    <th>cost</th>
-  </tr>
-<% @cards.each do |card| %>
-  <tr>
-    <th><%= link_to card.name, :controller => 'hearthstone', :action => 'show', :id => card, :remote => true, "data-type" => "script" %></th>
-    <th><%= card.types %></th>
-    <th><%= card.cost %></th>
-  </tr>
-<% end %>
-</table>
-<div id="content" style="margin-left: 400px; margin-top:20px">
-</div>
+  <li style="position: absolute; top:70px; left:5px">
+    <p><%= link_to 'Hunter', :controller => 'hearthstone', :action => 'select', :belong => 'Hunter', :remote => true, "data-type" => "script "%></p>
+    <p><%= link_to 'Mage', :controller => 'hearthstone', :action => 'select', :belong => 'Mage', :remote => true, "data-type" => "script "%></p>  
+</li>
+  <table id="belonglist" style="position: absolute; top:70px; left:100px">
+  </table>
+  <div id="content" style="margin-left: 400px; margin-top:20px">
+  </div>
 </div>
