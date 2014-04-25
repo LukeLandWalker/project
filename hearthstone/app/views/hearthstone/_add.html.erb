@@ -1,9 +1,13 @@
 <p><%= @cardArray.size %></p>
-<% @cardArray.each do |card| %>
+<% i = 0 %>
+<% while (i < @cardArray.size) %>
 <table>
   <tr>
-    <th><%= card.card_id %></th>
-    <th><%= card.number %></th>
+    <th><%= @cardArray[i].name %></th>
+    <th><%= @cardArray[i].types %></th>
+    <th><%= @cardArray[i].cost %></th>
+    <th><%= @TempCards[i].number %></th>
   <tr>
 </table>
+<% i += 1 %>
 <% end %>

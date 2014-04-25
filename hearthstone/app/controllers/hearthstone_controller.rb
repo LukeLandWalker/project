@@ -20,7 +20,7 @@ class HearthstoneController < ApplicationController
   end
   def add
     @newCard = TempSet.new
-    @warn = ''
+    @cardArray = Array.new
     @newCard.card_id = params[:id]
     @newCard.number = 1
     @oldCard = TempSet.find_by_card_id(@newCard.card_id)
@@ -30,12 +30,13 @@ class HearthstoneController < ApplicationController
       if @oldCard.number == 1
 	@oldCard.update_attribute('number', 2)
         @oldCard.save
-      else
-	@warn = 'This card is 2 already'
       end
     end      
     
-    @cardArray = TempSet.all
+    @TempCards = TempSet.all
+    @TempCards.each do |card|
+      @cardArray.push(Card.find(card.card_id))
+    end
     respond_to do |format|
       format.html
       format.js
