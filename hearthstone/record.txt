@@ -1,4 +1,4 @@
-1.数据库表格对应为ruby中的一个类,行对应为一个对象，列对应为对象属性。所有的数据库类操作都继承自ActiveRecord::Migration。
+ctiveRecord::Migration。
 2.所有对数据库的操作都会生成记录，在下次执行bundle exec rake db:migrate时不会重复执行。
 3.在对应数据库的.rb里加入validates_presence_of可以强制要求某些属性not null。
 4.用rails g model创建model后，会生成名字带s的数据库，如rails g model event，则会查生events的数据库。
@@ -7,13 +7,3 @@
 def change
     rename :table, :oldname, :newname
 end
-
-
- if @oldCard = TempSet.where("card_id = ?", params[:id])
-      if @oldCard.number + @newCard.number > 2
-        @warn = 'Too many this card, it already have' + @oldCard.number.to_s
-      else
-        @oldCard.update_attribute('number', 2)
-      end
-    else
-
