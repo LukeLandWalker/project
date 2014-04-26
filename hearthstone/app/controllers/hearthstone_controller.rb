@@ -30,7 +30,8 @@ class HearthstoneController < ApplicationController
     end
   end
   def select
-    @cards = Card.where(["belong = ?", params[:belong]])
+    @cards1 = Card.where(["belong = ?", params[:belong]])
+	@cards2 = Card.where(["belong = 'All'"])
     respond_to do |format|
       format.html
       format.js
