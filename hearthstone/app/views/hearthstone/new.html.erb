@@ -1,0 +1,25 @@
+<div>
+  <div style ="position: absolute; top:120px; left:5px">
+    <p><%= link_to 'Hunter', :controller => 'hearthstone', :action => 'select', :belong => 'Hunter', :remote => true, "data-type" => "script "%></p>
+    <p><%= link_to 'Mage', :controller => 'hearthstone', :action => 'select', :belong => 'Mage', :remote => true, "data-type" => "script "%></p>
+</div>
+<div id = "belonglist" style = "position: absolute; left: 70px; top: 120px; width: 250px; height: 200px">
+</div >
+  <div id = "content" style = "position: absolute; top:120px; left:660px">
+  </div>
+  <div id = "view" style = "position: absolute; top:350px; left:70px; width: 300px; height: 300px">
+  </div>
+</div>
+
+<h1>新建卡组</h1>
+<div style ="position: absolute; top:10px; left:150px">
+<%= form_tag "/hearthstone/create" do %>
+  <%= label_tag "Name" %>
+  <%= text_field_tag :name %>
+
+  <%= label_tag "Description" %>
+  <%= text_area_tag :description %>
+
+  <%= submit_tag "Create" %>
+<% end %>
+</div>

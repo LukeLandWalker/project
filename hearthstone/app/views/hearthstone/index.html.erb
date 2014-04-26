@@ -1,2 +1,3 @@
 <h1>HearthStone</h1>
-<p><%= link_to "新建卡组", hearthstone_zuka_path %></p>
+<p><%= link_to "新建卡组", :controller => 'hearthstone', :action => 'new' %></p>
+<p><%= link_to "查看已有卡组", :controller => 'hearthstone', :action => 'check' %></p>

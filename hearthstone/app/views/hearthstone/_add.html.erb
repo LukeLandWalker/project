@@ -1,19 +1,24 @@
-<p>Already have <%= @number %> cards (less than 30)</p>
+<div>
+<p>Aready have <%= @number %> cards (less than 30)</p>
 <% i = 0 %>
 <table>
   <tr>
-    <th>name</th>
-    <th>type</th>
-    <th>cost</th>
+    <th style = "width: 120px">name</th>
+    <th style = "width: 40px">type</th>
+    <th style = "width: 35px">cost</th>
     <th>number</th>
   </tr>
+</table>
+<div style = "width: 280px; height: 200px; overflow-y:auto">
+<table>
 <% while (i < @cardArray.size) %>
   <tr>
-    <th><%= @cardArray[i].name %></th>
+    <th><%= link_to @cardArray[i].name, :controller => 'hearthstone', :action => 'show', :id => @cardArray[i], :remote => true, "data-type" => "script" %></th>
     <th><%= @cardArray[i].types %></th>
-    <th><%= @cardArray[i].cost %></th>
+    <th style = "width: 40px"><%= @cardArray[i].cost %></th>
     <th><%= @TempCards[i].number %></th>
   </tr>
 <% i += 1 %>
 <% end %>
 </table>
+</div>

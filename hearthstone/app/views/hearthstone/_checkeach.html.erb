@@ -1,5 +1,5 @@
 <div>
-<p>Aready have <%= @number %> cards (less than 30)</p>
+<p>Have <%= @number %> cards</p>
 <% i = 0 %>
 <table>
   <tr>
@@ -16,9 +16,9 @@
     <th><%= link_to @cardArray[i].name, :controller => 'hearthstone', :action => 'show', :id => @cardArray[i], :remote => true, "data-type" => "script" %></th>
     <th><%= @cardArray[i].types %></th>
     <th style = "width: 40px"><%= @cardArray[i].cost %></th>
-    <th><%= @TempCards[i].number %></th>
+    <th><%= @cards[i].number %></th>
   </tr>
 <% i += 1 %>
 <% end %>
 </table>
-<div>
+</div>

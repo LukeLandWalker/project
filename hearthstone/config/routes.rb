@@ -1,6 +1,7 @@
 Hearthstone::Application.routes.draw do
-  get "hearthstone/zuka" => "hearthstone#zuka"
+  get "hearthstone/new" => "hearthstone#new"
   get "hearthstone/index" => "hearthstone#index"
+  get "hearthstone/create" => "hearthstone#create"
   root :to => "hearthstone#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.

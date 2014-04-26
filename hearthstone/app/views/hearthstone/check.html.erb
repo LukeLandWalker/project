@@ -1,0 +1,10 @@
+<% @cardSets.each do |card| %>
+<li>
+<%= link_to card.name, :controller => 'hearthstone', :action => 'checkeach', :name => card.name, :remote => true, "data-type" => "script" %>
+</li>
+<% end %>
+<div id = "setList" style = "position: absolute; left: 70px; top: 120px; width: 250px; height: 200px">
+</div>
+<div id = "content" style = "position: absolute; top:120px; left:380px">
+</div>
+
