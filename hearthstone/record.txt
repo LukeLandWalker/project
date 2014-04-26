@@ -7,3 +7,8 @@ ctiveRecord::Migration。
 def change
     rename :table, :oldname, :newname
 end
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5ddfa48bcc6de1806dfae72e76d631a148491b7c
