@@ -1,1 +1,2 @@
-用model的belong、have关系实现多行提交
+1.用model的belong、have关系实现多行提交
+2.使用jQuery实现了动态删除DOM功能
