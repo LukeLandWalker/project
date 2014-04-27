@@ -4,7 +4,8 @@ $(document).ready(function() {
       type: "DELETE",
       url: this.href
     });
-    $(this).parents("p:first").remove();
+    $(this).prevAll("input[type=hidden]").val("1");
+    $(this).parents("p:first").hide();
     return false;
   });
 });
